@@ -90,5 +90,12 @@ public class Curso {
 	public void setAutor(Usuario autor) {
 		this.autor = autor;
 	}
-	
+
+	public List<Usuario> getSuscriptores() {
+		return suscriptores;
+	}
+
+	public List<Leccion> getLecciones() {
+		return lecciones;
+	}
 }

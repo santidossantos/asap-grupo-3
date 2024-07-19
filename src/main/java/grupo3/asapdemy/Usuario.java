@@ -16,4 +16,16 @@ public class Usuario {
 	 public boolean isBecado() {
 		 return this.becado;
 	 }
- }
+
+	public int getId() {
+		return id;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public String getMail() {
+		return mail;
+	}
+}
