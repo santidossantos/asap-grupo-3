@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import enums.TipoDeResultado;
+import static enums.TipoDeResultado.MAX_BECADOS;
+import static enums.TipoDeResultado.ES_AUTOR;
+import static enums.TipoDeResultado.YA_SUSCRIPTO;
+import static enums.TipoDeResultado.SUSCRIPTO_OK;
+
 
 public class Curso {
 	private int id;
@@ -12,6 +17,7 @@ public class Curso {
 	private int valoracion;
 	private Usuario autor;
 	private List<Usuario> suscriptores;
+	private List<Leccion> lecciones;
 	
 	public Curso (int id, String titulo, int precio, int valoracion, Usuario autor) {
 		this.id = id;
@@ -20,6 +26,7 @@ public class Curso {
 		this.valoracion = valoracion;
 		this.autor = autor;
 		this.suscriptores = new ArrayList<>();
+		this.lecciones = new ArrayList<>();
 	}
 	
 	public TipoDeResultado agregarSuscriptor(Usuario suscriptor) {
@@ -27,16 +34,21 @@ public class Curso {
 			return MAX_BECADOS;
 		}
 		else if (suscriptor == this.autor) {
-			return false;
+			return ES_AUTOR;
 		}
 		else if (this.suscriptores.contains(suscriptor)) {
-			return false;
+			return YA_SUSCRIPTO;
 		}
-		return this.suscriptores.add(suscriptor);
+		this.suscriptores.add(suscriptor);
+		return SUSCRIPTO_OK;
 	}
 	
 	private boolean maxCantSuscriptores(){
 		return this.suscriptores.stream().filter(Usuario::isBecado).count()>5;
+	}
+	
+	public void agregarLeccion(Leccion leccion) {
+		this.lecciones.add(leccion);
 	}
 
 	public int getId() {
