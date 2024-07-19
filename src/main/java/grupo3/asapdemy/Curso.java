@@ -3,6 +3,8 @@ package grupo3.asapdemy;
 import java.util.ArrayList;
 import java.util.List;
 
+import enums.TipoDeResultado;
+
 public class Curso {
 	private int id;
 	private String titulo;
@@ -20,9 +22,21 @@ public class Curso {
 		this.suscriptores = new ArrayList<>();
 	}
 	
-	public boolean agregarSuscriptor(Usuario suscriptor) {
-		
+	public TipoDeResultado agregarSuscriptor(Usuario suscriptor) {
+		if (maxCantSuscriptores()) {
+			return MAX_BECADOS;
+		}
+		else if (suscriptor == this.autor) {
+			return false;
+		}
+		else if (this.suscriptores.contains(suscriptor)) {
+			return false;
+		}
 		return this.suscriptores.add(suscriptor);
+	}
+	
+	private boolean maxCantSuscriptores(){
+		return this.suscriptores.stream().filter(Usuario::isBecado).count()>5;
 	}
 
 	public int getId() {
