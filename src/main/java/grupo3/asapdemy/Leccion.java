@@ -1,6 +1,6 @@
 package grupo3.asapdemy;
 
-import enums.TipoDeLeccion;
+import grupo3.asapdemy.enums.TipoDeLeccion;
 
 public class Leccion {
 	private String nombre;

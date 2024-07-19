@@ -1,15 +1,15 @@
 package grupo3.asapdemy;
 
-import enums.TipoDeLeccion;
-import enums.TipoDeResultado;
+import grupo3.asapdemy.enums.TipoDeLeccion;
+import grupo3.asapdemy.enums.TipoDeResultado;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static enums.TipoDeResultado.CURSO_INEX;
-import static enums.TipoDeResultado.USUARIO_INEX;
+import static grupo3.asapdemy.enums.TipoDeResultado.CURSO_INEX;
+import static grupo3.asapdemy.enums.TipoDeResultado.USUARIO_INEX;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AsapdemyTest {
@@ -96,6 +96,5 @@ public class AsapdemyTest {
     @Test
     void testUsuarioEsAutor() {
     }
-
 
 }

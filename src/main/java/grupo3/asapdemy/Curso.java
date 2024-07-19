@@ -3,11 +3,13 @@ package grupo3.asapdemy;
 import java.util.ArrayList;
 import java.util.List;
 
-import enums.TipoDeResultado;
-import static enums.TipoDeResultado.MAX_BECADOS;
-import static enums.TipoDeResultado.ES_AUTOR;
-import static enums.TipoDeResultado.YA_SUSCRIPTO;
-import static enums.TipoDeResultado.SUSCRIPTO_OK;
+import grupo3.asapdemy.enums.TipoDeResultado;
+
+import static grupo3.asapdemy.constants.Constants.LIMITE_BECADOS;
+import static grupo3.asapdemy.enums.TipoDeResultado.MAX_BECADOS;
+import static grupo3.asapdemy.enums.TipoDeResultado.ES_AUTOR;
+import static grupo3.asapdemy.enums.TipoDeResultado.YA_SUSCRIPTO;
+import static grupo3.asapdemy.enums.TipoDeResultado.SUSCRIPTO_OK;
 
 
 public class Curso {
@@ -44,7 +46,7 @@ public class Curso {
 	}
 	
 	private boolean maxCantSuscriptores(){
-		return this.suscriptores.stream().filter(Usuario::isBecado).count()>5;
+		return this.suscriptores.stream().filter(Usuario::isBecado).count() > LIMITE_BECADOS;
 	}
 	
 	public void agregarLeccion(Leccion leccion) {
