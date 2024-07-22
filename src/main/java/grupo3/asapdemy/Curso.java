@@ -46,7 +46,7 @@ public class Curso {
 	}
 	
 	private boolean maxCantSuscriptores(){
-		return this.suscriptores.stream().filter(Usuario::isBecado).count() > LIMITE_BECADOS;
+		return this.suscriptores.stream().filter(Usuario::isBecado).count() == LIMITE_BECADOS;
 	}
 	
 	public void agregarLeccion(Leccion leccion) {

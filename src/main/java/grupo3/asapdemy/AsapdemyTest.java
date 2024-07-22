@@ -31,12 +31,12 @@ public class AsapdemyTest {
         this.u1 = new Usuario(1, "Juan", "juan@gmail.com", false);
         this.u2 = new Usuario(2, "Pablo", "pablo@gmail.com", false);
         this.u3 = new Usuario(3, "Paula", "pau@gmail.com", false);
-        this.becado1 = new Usuario(4, "Naza", "naza@gmail.com", true);
-        this.becado2 = new Usuario(5, "Nico", "sjksdjsk@gmail.com", true);
-        this.becado3 = new Usuario(6, "Nahuel", "sjlshjs", true);
-        this.becado4 = new Usuario(7, "Nahuel", "sjlshjs", true);
-        this.becado5 = new Usuario(8, "Nahuel", "sjlshjs", true);
-        this.becado6 = new Usuario(9, "Nahuel", "sjlshjs", true);
+        this.becado1 = new Usuario(4, "Juan Carlos Java", "juanCarlosJAVA@gmail.com", true);
+        this.becado2 = new Usuario(5, "Nico", "nico@gmail.com", true);
+        this.becado3 = new Usuario(6, "Nahuel", "nahuel@gmail.com", true);
+        this.becado4 = new Usuario(7, "Manuel", "manuel@gmail.com", true);
+        this.becado5 = new Usuario(8, "Amira", "amira@gmail.com", true);
+        this.becado6 = new Usuario(9, "Pepe", "pepe@gmail.com", true);
         this.usuarios = List.of(u1, u2, u3, becado1, becado2, becado3, becado4, becado5, becado6);
 
         Curso curso1 = new Curso(1, "Java", 10, 1000, u2);
@@ -79,22 +79,33 @@ public class AsapdemyTest {
 
     @Test
     void testUsuarioInexistente() {
+    	assertEquals(TipoDeResultado.USUARIO_INEX, suscribirseACurso(11,2));
     }
 
     @Test
     void testCursoInexistente() {
+    	assertEquals(TipoDeResultado.CURSO_INEX, suscribirseACurso(3,3));
     }
 
     @Test
     void testUsuarioYaInscripto() {
+    	suscribirseACurso(5,2);
+    	assertEquals(TipoDeResultado.YA_SUSCRIPTO, suscribirseACurso(5,2));
     }
 
     @Test
     void testMaximoDeInscriptos() {
+    	suscribirseACurso(5,2);
+    	suscribirseACurso(6,2);
+    	suscribirseACurso(7,2);
+    	suscribirseACurso(8,2);
+    	suscribirseACurso(9,2);
+    	assertEquals(TipoDeResultado.MAX_BECADOS, suscribirseACurso(4,2));
     }
 
     @Test
     void testUsuarioEsAutor() {
+    	assertEquals(TipoDeResultado.ES_AUTOR, suscribirseACurso(2,1));
     }
 
 }
