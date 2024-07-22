@@ -12,16 +12,19 @@
   <h3>
 </div>
 
+
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/santidossantos/asap-grupo-3/main)
 
 
-### Integrantes
 
+<br>
 <div align="center">
+<h2 style="border-bottom: 0;">Integrantes</h2>
 <a href="https://github.com/santidossantos/asap-grupo-3/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=santidossantos/asap-grupo-3" />
 </a>
 </div>
+<br><br>
 
 
 ### Tecnologías Usadas
