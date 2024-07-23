@@ -1,5 +1,7 @@
-package grupo3.asapdemy;
-
+import grupo3.asapdemy.Categoria;
+import grupo3.asapdemy.Curso;
+import grupo3.asapdemy.Leccion;
+import grupo3.asapdemy.Usuario;
 import grupo3.asapdemy.enums.TipoDeLeccion;
 import grupo3.asapdemy.enums.TipoDeResultado;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,7 +14,7 @@ import static grupo3.asapdemy.enums.TipoDeResultado.CURSO_INEX;
 import static grupo3.asapdemy.enums.TipoDeResultado.USUARIO_INEX;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class AsapdemyTest {
+public class AsapDemyTest {
 
     Usuario u1;
     Usuario u2;

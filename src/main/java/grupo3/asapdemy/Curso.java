@@ -5,7 +5,6 @@ import java.util.List;
 
 import grupo3.asapdemy.enums.TipoDeResultado;
 
-import static grupo3.asapdemy.constants.Constants.LIMITE_BECADOS;
 import static grupo3.asapdemy.enums.TipoDeResultado.MAX_BECADOS;
 import static grupo3.asapdemy.enums.TipoDeResultado.ES_AUTOR;
 import static grupo3.asapdemy.enums.TipoDeResultado.YA_SUSCRIPTO;
@@ -23,6 +22,7 @@ public class Curso {
 	private Usuario autor;
 	private List<Usuario> suscriptores;
 	private List<Leccion> lecciones;
+	public static final int LIMITE_BECADOS = 5;
 
 	/**
 	 * Constructor para inicializar un curso con su ID, título, precio, valoración y autor.
