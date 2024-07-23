@@ -26,6 +26,10 @@ public class AsapdemyTest {
     List<Usuario> usuarios;
     List<Curso> cursos;
 
+
+    /**
+     * Método que se ejecuta antes de cada prueba para inicializar los objetos necesarios.
+     */
     @BeforeEach
     void setUp() {
         this.u1 = new Usuario(1, "Juan", "juan@gmail.com", false);
@@ -54,6 +58,13 @@ public class AsapdemyTest {
         curso1.agregarLeccion(leccion2);
     }
 
+    /**
+     * Método para suscribir un usuario a un curso.
+     *
+     * @param idUsuario El ID del usuario que se quiere suscribir.
+     * @param idCurso El ID del curso al que se quiere suscribir el usuario.
+     * @return El resultado de la suscripción.
+     */
     public TipoDeResultado suscribirseACurso(int idUsuario, int idCurso) {
         Usuario usuario = this.usuarios.stream().filter(u -> u.getId() == idUsuario).findFirst().orElse(null);
         Curso curso = this.cursos.stream().filter(c -> c.getId() == idCurso).findFirst().orElse(null);
@@ -69,6 +80,9 @@ public class AsapdemyTest {
         return curso.agregarSuscriptor(usuario);
     }
 
+    /**
+     * Prueba que verifica la suscripción exitosa de un usuario a un curso.
+     */
     @Test
     void testSuscribirseACursoOk() {
         Curso curso = this.cursos.stream().findFirst().orElse(null);
@@ -77,22 +91,34 @@ public class AsapdemyTest {
         assertEquals(2, curso.getSuscriptores().size());
     }
 
+    /**
+     * Prueba que verifica el comportamiento cuando el usuario no existe.
+     */
     @Test
     void testUsuarioInexistente() {
     	assertEquals(TipoDeResultado.USUARIO_INEX, suscribirseACurso(11,2));
     }
 
+    /**
+     * Prueba que verifica el comportamiento cuando el curso no existe.
+     */
     @Test
     void testCursoInexistente() {
     	assertEquals(TipoDeResultado.CURSO_INEX, suscribirseACurso(3,3));
     }
 
+    /**
+     * Prueba que verifica el comportamiento cuando el usuario ya está suscrito al curso.
+     */
     @Test
     void testUsuarioYaInscripto() {
     	suscribirseACurso(5,2);
     	assertEquals(TipoDeResultado.YA_SUSCRIPTO, suscribirseACurso(5,2));
     }
 
+    /**
+     * Prueba que verifica el comportamiento cuando se alcanza el máximo de usuarios becados en un curso.
+     */
     @Test
     void testMaximoDeInscriptos() {
     	suscribirseACurso(5,2);
@@ -103,6 +129,9 @@ public class AsapdemyTest {
     	assertEquals(TipoDeResultado.MAX_BECADOS, suscribirseACurso(4,2));
     }
 
+    /**
+     * Prueba que verifica el comportamiento cuando el usuario es el autor del curso.
+     */
     @Test
     void testUsuarioEsAutor() {
     	assertEquals(TipoDeResultado.ES_AUTOR, suscribirseACurso(2,1));
