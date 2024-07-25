@@ -1,3 +1,5 @@
+package clase5.asapdemy;
+
 import grupo3.clase5.asapdemy.Categoria;
 import grupo3.clase5.asapdemy.Curso;
 import grupo3.clase5.asapdemy.Leccion;
