@@ -24,4 +24,10 @@ public abstract class Empleado {
 	public int getAntiguedad() {
 		return LocalDate.now().getYear() - getIngreso(); 
 	}
+
+	@Override
+	public String toString() {
+		return "Empleado nombre=" + nombre + ", apellido=" + apellido + "salario: "+this.calcularSalario();
+	}
+
 }
