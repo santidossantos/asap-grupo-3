@@ -16,12 +16,9 @@
 </div>
 <br><br>
 
-
 ### Tecnologías
 
   ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
   ![JUnit](https://img.shields.io/badge/Junit5-25A162?style=for-the-badge&logo=junit5&logoColor=white)
 
   ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/santidossantos/asap-grupo-3/main)
-
-****
