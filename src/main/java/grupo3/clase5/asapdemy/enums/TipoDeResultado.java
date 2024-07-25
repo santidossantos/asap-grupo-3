@@ -1,4 +1,4 @@
-package grupo3.asapdemy.enums;
+package grupo3.clase5.asapdemy.enums;
 
 /**
  * Enum que representa los diferentes resultados posibles al intentar suscribirse a un curso.

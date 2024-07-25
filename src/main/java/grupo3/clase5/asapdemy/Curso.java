@@ -1,14 +1,14 @@
-package grupo3.asapdemy;
+package grupo3.clase5.asapdemy;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import grupo3.asapdemy.enums.TipoDeResultado;
+import grupo3.clase5.asapdemy.enums.TipoDeResultado;
 
-import static grupo3.asapdemy.enums.TipoDeResultado.MAX_BECADOS;
-import static grupo3.asapdemy.enums.TipoDeResultado.ES_AUTOR;
-import static grupo3.asapdemy.enums.TipoDeResultado.YA_SUSCRIPTO;
-import static grupo3.asapdemy.enums.TipoDeResultado.SUSCRIPTO_OK;
+import static grupo3.clase5.asapdemy.enums.TipoDeResultado.MAX_BECADOS;
+import static grupo3.clase5.asapdemy.enums.TipoDeResultado.ES_AUTOR;
+import static grupo3.clase5.asapdemy.enums.TipoDeResultado.YA_SUSCRIPTO;
+import static grupo3.clase5.asapdemy.enums.TipoDeResultado.SUSCRIPTO_OK;
 
 /**
  * Representa un curso que contiene información sobre su título, precio,

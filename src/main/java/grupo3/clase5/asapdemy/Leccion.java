@@ -1,6 +1,6 @@
-package grupo3.asapdemy;
+package grupo3.clase5.asapdemy;
 
-import grupo3.asapdemy.enums.TipoDeLeccion;
+import grupo3.clase5.asapdemy.enums.TipoDeLeccion;
 
 /**
  * Representa una lección dentro de un curso.

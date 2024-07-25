@@ -1,17 +1,17 @@
-import grupo3.asapdemy.Categoria;
-import grupo3.asapdemy.Curso;
-import grupo3.asapdemy.Leccion;
-import grupo3.asapdemy.Usuario;
-import grupo3.asapdemy.enums.TipoDeLeccion;
-import grupo3.asapdemy.enums.TipoDeResultado;
+import grupo3.clase5.asapdemy.Categoria;
+import grupo3.clase5.asapdemy.Curso;
+import grupo3.clase5.asapdemy.Leccion;
+import grupo3.clase5.asapdemy.Usuario;
+import grupo3.clase5.asapdemy.enums.TipoDeLeccion;
+import grupo3.clase5.asapdemy.enums.TipoDeResultado;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static grupo3.asapdemy.enums.TipoDeResultado.CURSO_INEX;
-import static grupo3.asapdemy.enums.TipoDeResultado.USUARIO_INEX;
+import static grupo3.clase5.asapdemy.enums.TipoDeResultado.CURSO_INEX;
+import static grupo3.clase5.asapdemy.enums.TipoDeResultado.USUARIO_INEX;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AsapDemyTest {
