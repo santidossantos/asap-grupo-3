@@ -27,4 +27,6 @@ public class ServicioDeReparacion extends Servicio {
 	public int getNivelDificultad() {
 		return nivelDificultad;
 	}
+
+
 }

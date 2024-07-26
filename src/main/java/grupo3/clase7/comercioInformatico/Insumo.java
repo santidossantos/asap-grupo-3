@@ -1,6 +1,6 @@
 package grupo3.clase7.comercioInformatico;
 
-public class Insumo {
+public class Insumo implements Facturable{
 	private String nombre;
 	private	double porcentajeGanancia;
 	private double precioLista;
@@ -12,9 +12,11 @@ public class Insumo {
 		this.precioLista = precioLista;
 		this.tipo = tipo;
 	}
-	
+
 	public double calcularPrecio() {
-		return precioLista + (precioLista*porcentajeGanancia);
+		double precio = precioLista + (precioLista * porcentajeGanancia);
+		double precioConIva = precio + precio * IVA;
+		return precioConIva;
 	}
 }
 

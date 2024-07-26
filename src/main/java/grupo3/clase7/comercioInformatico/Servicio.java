@@ -1,6 +1,7 @@
 package grupo3.clase7.comercioInformatico;
 
 public abstract class Servicio implements Facturable {
+
 	private int cantidadHoras;
 	
 	public Servicio (int cantidadHoras) {
@@ -8,7 +9,9 @@ public abstract class Servicio implements Facturable {
 	}
 	
 	public double calcularPrecio() {
-		return cantidadHoras + getValorHora();
+		double precio = cantidadHoras * getValorHora();
+		double precioConIva = precio + precio * (IVA / 2);
+		return precioConIva;
 	}
 	
 	public abstract int getValorHora();
