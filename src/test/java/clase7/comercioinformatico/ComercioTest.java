@@ -20,14 +20,22 @@ public class ComercioTest {
 
     @BeforeEach
     void setUp() {
-        insumo1 = new Insumo("teclado", 0.1, 15000, TipoDeInsumo.PERIFERICOS);
+        insumo1 =
+                new Insumo("teclado",
+                        0.1, 15000, TipoDeInsumo.PERIFERICOS);
         servicio1 = new ServicioDeArmado(3);
         servicio2 = new ServicioDeReparacion(4, 4);
         servicio3 = new ServicioDeReparacion(2, 1);
         servicio4 = new ServicioDeReparacion(5, 2);
         servicio5 = new ServicioDeReparacion(6, 3);
-        List<Facturable> facturables = Arrays.asList(insumo1, servicio1, servicio2, servicio3, servicio4, servicio5);
+        List<Facturable> facturables =
+                Arrays.asList(insumo1, servicio1, servicio2, servicio3, servicio4, servicio5);
         historial = new Historial(facturables);
+    }
+
+    @Test
+    public void testMontoTotalFacturado() {
+        assertEquals(116250, historial.montoTotalFacturado());
     }
 
     @Test

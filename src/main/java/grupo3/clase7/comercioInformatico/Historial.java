@@ -18,7 +18,10 @@ public class Historial {
 	}
 
 	public int cantServiciosSimples() {
-		return (int) facturas.stream().filter(facturable -> (facturable instanceof ServicioDeReparacion))
-				.map(facturable -> (((ServicioDeReparacion) facturable).getNivelDificultad() < 2)).count();
+		return (int) facturas.stream()
+				.filter(facturable -> facturable instanceof ServicioDeReparacion
+						&& ((ServicioDeReparacion) facturable).getNivelDificultad() < 2)
+				.count();
 	}
+
 }
