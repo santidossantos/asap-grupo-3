@@ -6,4 +6,9 @@ public class ServicioDeArmado extends Servicio{
 	public ServicioDeArmado(int cantidadHoras) {
 		super (cantidadHoras);
 	}
+
+	@Override
+	public double getValorHora() {
+		return this.VALOR_HORA;
+	}
 }

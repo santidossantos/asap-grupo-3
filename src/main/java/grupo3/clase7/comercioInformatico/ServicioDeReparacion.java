@@ -1,7 +1,7 @@
 package grupo3.clase7.comercioInformatico;
 
 public class ServicioDeReparacion extends Servicio {
-	public int VALOR_HORA = 250;
+	public int VALOR_HORA = 180;
 	public int nivelDificultad;
 	
 	
@@ -17,5 +17,14 @@ public class ServicioDeReparacion extends Servicio {
 			precio = precio + (precio*0.25);
 		}
 		return precio;
+	}
+
+	@Override
+	public int getValorHora() {
+		return VALOR_HORA;
+	}
+	
+	public int getNivelDificultad() {
+		return nivelDificultad;
 	}
 }
