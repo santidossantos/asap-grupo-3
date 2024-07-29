@@ -3,18 +3,17 @@ package grupo3.clase7.comercio.informatico;
 import java.util.List;
 
 public class Historial {
+
 	private List<Facturable> facturas;
 
 	public Historial(List<Facturable> facturas) {
 		this.facturas = facturas;
 	}
 
-	public List<Facturable> getFacturas() {
-		return facturas;
-	}
-
 	public double montoTotalFacturado() {
-		return facturas.stream().mapToDouble(facturable -> facturable.calcularPrecio()).sum();
+		return facturas.stream().
+				mapToDouble(Facturable::calcularPrecio)
+				.sum();
 	}
 
 	public int cantServiciosSimples() {

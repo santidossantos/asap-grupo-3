@@ -1,6 +1,7 @@
 package grupo3.clase7.comercio.informatico;
 
 public class Insumo implements Facturable{
+
 	private String nombre;
 	private	double porcentajeGanancia;
 	private double precioLista;

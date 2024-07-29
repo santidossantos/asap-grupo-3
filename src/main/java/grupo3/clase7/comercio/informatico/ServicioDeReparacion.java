@@ -1,9 +1,9 @@
 package grupo3.clase7.comercio.informatico;
 
 public class ServicioDeReparacion extends Servicio {
+
 	public int VALOR_HORA = 180;
 	public int nivelDificultad;
-	
 	
 	public ServicioDeReparacion(int cantidadHoras, int nivelDificultad){
 		super(cantidadHoras);
@@ -13,9 +13,11 @@ public class ServicioDeReparacion extends Servicio {
 	public double calcularPrecio() {
 		double precio;
 		precio = super.calcularPrecio();
+
 		if (nivelDificultad > 3) {
-			precio = precio + (precio*0.25);
+			precio = precio + (precio * 0.25);
 		}
+
 		return precio;
 	}
 
@@ -27,6 +29,5 @@ public class ServicioDeReparacion extends Servicio {
 	public int getNivelDificultad() {
 		return nivelDificultad;
 	}
-
 
 }

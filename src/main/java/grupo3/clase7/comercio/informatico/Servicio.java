@@ -10,7 +10,7 @@ public abstract class Servicio implements Facturable {
 	
 	public double calcularPrecio() {
 		double precio = cantidadHoras * getValorHora();
-		double precioConIva = precio + precio * (IVA / 2);
+		double precioConIva = precio + (precio * (IVA / 2));
 		return precioConIva;
 	}
 	
