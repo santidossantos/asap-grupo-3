@@ -1,5 +1,6 @@
-package clase7.comercioinformatico;
+package clase7.comercio.informatico;
 
+import grupo3.clase7.comercio.informatico.*;
 import grupo3.clase7.comercioInformatico.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

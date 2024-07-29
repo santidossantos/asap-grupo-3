@@ -1,4 +1,4 @@
-package grupo3.clase7.comercioInformatico;
+package grupo3.clase7.comercio.informatico;
 
 import java.util.List;
 

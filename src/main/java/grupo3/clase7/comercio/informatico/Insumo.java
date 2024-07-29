@@ -1,4 +1,4 @@
-package grupo3.clase7.comercioInformatico;
+package grupo3.clase7.comercio.informatico;
 
 public class Insumo implements Facturable{
 	private String nombre;
