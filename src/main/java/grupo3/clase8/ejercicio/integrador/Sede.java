@@ -21,11 +21,19 @@ public class Sede {
     }
 
     private double porcentajeExamenesReprobados() {
-        return 0;
+        int totalExamenes = examenes.size();
+
+        return (double) this.examenes.stream()
+                .filter(examen -> !examen.estaAprobado())
+                .count() / totalExamenes;
     }
 
     private double promedioTiempoExamenesAutoAprobados() {
-        return 0;
+        return this.examenes.stream()
+                .filter(exam -> exam instanceof ExamenAuto)
+                .mapToDouble(Examen::getPromedioTiempo)
+                .average()
+                .orElse(0);
     }
 
 }

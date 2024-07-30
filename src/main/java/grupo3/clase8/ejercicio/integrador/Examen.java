@@ -8,7 +8,9 @@ import lombok.NoArgsConstructor;
 public abstract class Examen implements Evaluable {
 
     private String fecha;
+    private Persona autor;
 
     public abstract boolean estaAprobado();
 
+    public abstract int getPromedioTiempo();
 }

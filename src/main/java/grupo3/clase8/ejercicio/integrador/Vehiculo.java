@@ -11,6 +11,6 @@ public abstract class Vehiculo {
 
     private String patente;
     private String marca;
-    private String cilindrada;
+    private Integer cilindrada;
 
 }
