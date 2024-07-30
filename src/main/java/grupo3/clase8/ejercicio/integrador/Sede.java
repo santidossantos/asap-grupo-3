@@ -8,11 +8,9 @@ import java.util.List;
 @AllArgsConstructor
 public class Sede {
 
-    private List<Informe> informes;
     private List<Examen> examenes;
 
     public Sede() {
-        this.informes = new ArrayList<>();
         this.examenes = new ArrayList<>();
     }
 
