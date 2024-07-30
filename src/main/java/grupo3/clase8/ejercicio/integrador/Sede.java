@@ -17,7 +17,8 @@ public class Sede {
     }
 
     public Informe obtenerInforme() {
-        return null;
+        return new Informe(this.porcentajeExamenesReprobados(),
+                this.promedioTiempoExamenesAutoAprobados());
     }
 
     private double porcentajeExamenesReprobados() {
