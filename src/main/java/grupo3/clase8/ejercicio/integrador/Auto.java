@@ -1,13 +1,17 @@
 package grupo3.clase8.ejercicio.integrador;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@AllArgsConstructor
+
 @Getter
 public class Auto extends Vehiculo {
 
-    private String cantPuertas;
+    private Integer cantPuertas;
+
+	public Auto(String patente, String marca, Integer cilindrada, Integer cantPuertas) {
+		super(patente, marca, cilindrada);
+		this.cantPuertas = cantPuertas;
+	}
 
 
 }

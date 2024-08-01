@@ -35,4 +35,7 @@ public class Sede {
                 .orElse(0);
     }
 
+    public void agregarExamen(Examen examen) {
+    	this.examenes.add(examen);
+    }
 }

@@ -4,12 +4,11 @@ import lombok.Getter;
 
 @Getter
 public class ExamenAuto extends Examen {
-
+	private Circuito circuito;
     private Auto auto;
-    private Circuito circuito;
     private static final Integer TIEMPO_MAXIMO = 90;
 
-    public ExamenAuto(String fecha, Persona autor, Auto auto, Circuito circuito) {
+    public ExamenAuto(String fecha, Persona autor, Circuito circuito, Auto auto) {
         super(fecha, autor);
         this.auto = auto;
         this.circuito = circuito;
