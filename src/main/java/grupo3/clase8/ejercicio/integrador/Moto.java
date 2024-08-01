@@ -10,7 +10,6 @@ public class Moto extends Vehiculo {
 	public Moto(String patente, String marca, Integer cilindrada, boolean espejosCompletos) {
 		super(patente, marca, cilindrada);
 		this.espejosCompletos = espejosCompletos;
-		// TODO Auto-generated constructor stub
 	}
 
 }

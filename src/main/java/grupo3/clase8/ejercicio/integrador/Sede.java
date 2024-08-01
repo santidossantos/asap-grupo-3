@@ -22,14 +22,16 @@ public class Sede {
     private double porcentajeExamenesReprobados() {
         int totalExamenes = examenes.size();
 
-        return (double) this.examenes.stream()
+        double porcentajeExamenesReprobados =  (double) this.examenes.stream()
                 .filter(examen -> !examen.estaAprobado())
                 .count() / totalExamenes;
+
+        return porcentajeExamenesReprobados * 100;
     }
 
     private double promedioTiempoExamenesAutoAprobados() {
         return this.examenes.stream()
-                .filter(exam -> exam instanceof ExamenAuto)
+                .filter(exam -> exam instanceof ExamenAuto && exam.estaAprobado())
                 .mapToDouble(Examen::getPromedioTiempo)
                 .average()
                 .orElse(0);
