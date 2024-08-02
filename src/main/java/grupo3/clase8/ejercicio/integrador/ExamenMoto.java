@@ -38,8 +38,10 @@ public class ExamenMoto extends Examen {
 
     /**
      * Determina si el examen de la moto está aprobado.
-     * Si la cilindrada de la moto es mayor a 150, el examen está aprobado si todos los circuitos están aprobados.
-     * Si la cilindrada es 150 o menor, el examen está aprobado si no hay circuitos desaprobados y el tiempo total
+     * Si la cilindrada de la moto es mayor a 150,
+     * el examen está aprobado si todos los circuitos están aprobados.
+     * Si la cilindrada es 150 o menor,
+     * el examen está aprobado si no hay circuitos desaprobados y el tiempo total
      * de todos los circuitos es menor o igual al tiempo máximo total permitido.
      *
      * @return {@code true} si el examen está aprobado según los criterios especificados, {@code false} en caso contrario.
