@@ -6,9 +6,15 @@ import lombok.Data;
 /**
  * Clase que representa una persona con información básica.
  */
+
 @AllArgsConstructor
 @Data
 public class Persona {
+
+    /**
+     * Documento Nacional de Identidad (DNI) de la persona.
+     */
+    private String dni;
 
     /**
      * Nombre de la persona.
@@ -16,13 +22,8 @@ public class Persona {
     private String nombre;
 
     /**
-     * Apellido de la persona.
+     * E-mail de la persona.
      */
-    private String apellido;
-
-    /**
-     * Documento Nacional de Identidad (DNI) de la persona.
-     */
-    private String dni;
+    private String mail;
 
 }

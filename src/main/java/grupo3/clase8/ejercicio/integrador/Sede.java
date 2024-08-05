@@ -43,7 +43,7 @@ public class Sede {
         int totalExamenes = examenes.size();
 
         if (totalExamenes == 0) {
-            return 0; // Evita división por cero si no hay exámenes.
+            return 0;
         }
 
         double porcentajeExamenesReprobados = (double) this.examenes.stream()

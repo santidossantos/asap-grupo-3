@@ -54,13 +54,13 @@ public class ExamenMoto extends Examen {
             return this.circuitos.stream().allMatch(Circuito::estaAprobado);
         }
 
-        boolean superoMaxDesaprobados = this.circuitos.stream()
+        boolean hayDesaprobados = this.circuitos.stream()
                 .anyMatch(circ -> !circ.estaAprobado());
 
         int tiempoTotalCircuitos = this.circuitos.stream()
                 .mapToInt(Circuito::getTiempoEnSegundos).sum();
 
-        return !superoMaxDesaprobados && tiempoTotalCircuitos <= MAX_TIEMPO_TOTAL;
+        return !hayDesaprobados && tiempoTotalCircuitos <= MAX_TIEMPO_TOTAL;
     }
 
     /**
